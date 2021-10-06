@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SisEscola.Cadastro.Infra.Da
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SisEscola.Cadastro.Api", "src\SisEscola.Cadastro.Api\SisEscola.Cadastro.Api.csproj", "{AC4018B1-0769-4FE7-9099-2BA4AE95949E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SisEscola.Cadastro.Infra.CrossCutting", "src\SisEscola.Cadastro.Infra.CrossCutting\SisEscola.Cadastro.Infra.CrossCutting.csproj", "{26C65215-B95D-4AD3-AAB7-CEFC1E15833F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{AC4018B1-0769-4FE7-9099-2BA4AE95949E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC4018B1-0769-4FE7-9099-2BA4AE95949E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC4018B1-0769-4FE7-9099-2BA4AE95949E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26C65215-B95D-4AD3-AAB7-CEFC1E15833F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26C65215-B95D-4AD3-AAB7-CEFC1E15833F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26C65215-B95D-4AD3-AAB7-CEFC1E15833F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26C65215-B95D-4AD3-AAB7-CEFC1E15833F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

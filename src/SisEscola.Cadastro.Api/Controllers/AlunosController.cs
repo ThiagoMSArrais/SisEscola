@@ -1,11 +1,10 @@
 ﻿using AutoMapper;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using SisEscola.Cadastro.Api.Models;
+using SisEscola.Cadastro.Domain.Models;
 using SisEscola.Cadastro.Domain.Notificacoes.Interfaces;
 using SisEscola.Cadastro.Domain.Services.Interfaces;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace SisEscola.Cadastro.Api.Controllers
@@ -25,6 +24,33 @@ namespace SisEscola.Cadastro.Api.Controllers
             _mapper = mapper;
         }
 
+        [HttpPost("listar-alunos-filtro")]
+        public async Task<IEnumerable<AlunoViewModel>> ListarAlunosPorFiltro(FiltroViewModel filtroViewModel)
+        {
+            return _mapper.Map<IEnumerable<AlunoViewModel>>(await _alunoService.ObterAlunosComFiltro(tipoFiltro: filtroViewModel.TipoFiltro.ToString(),
+                                                                                                     consulta: filtroViewModel.Consulta));
+
+        }
+
+        [HttpGet("listar-alunos")]
+        public async Task<IEnumerable<AlunoViewModel>> ListarAlunos()
+        {
+            return _mapper.Map<IEnumerable<AlunoViewModel>>(await _alunoService.ObterAlunos());
+        }
+
+
+        [HttpGet("listar-responsaveis")]
+        public async Task<IEnumerable<ResponsavelViewModel>> ListarResponsaveis()
+        {
+            return _mapper.Map<IEnumerable<ResponsavelViewModel>>(await _alunoService.ObterResponsaveis());
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<AlunoViewModel>> CadastrarAluno(AlunoViewModel alunoViewModel)
+        {
+            return CustomResponse(_mapper.Map<AlunoViewModel>(await _alunoService.Adicionar(_mapper.Map<Aluno>(alunoViewModel))));
+
+        }
 
     }
 }

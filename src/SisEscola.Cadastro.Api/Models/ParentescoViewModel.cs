@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace SisEscola.Cadastro.Api.Models
+﻿namespace SisEscola.Cadastro.Api.Models
 {
-    public class ParentescoViewModel
+    public enum ParentescoViewModel
     {
+        MAE = 1, 
+        PAI = 2, 
+        TIO = 3,
+        AVO = 4
     }
 }

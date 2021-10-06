@@ -10,12 +10,12 @@ namespace SisEscola.Cadastro.Api.Models
             IdAluno = Guid.NewGuid();
         }
 
-        public Guid IdAluno { get; private set; }
-        public string Nome { get; private set; }
-        public DateTime DataNascimento { get; private set; }
-        public SegmentoViewModel Segmento { get; private set; }
-        public string FotoPerfil { get; private set; }
-        public string Email { get; private set; }
-        public ICollection<ResponsavelViewModel> Responsaveis { get; private set; }
+        public Guid IdAluno { get; set; }
+        public string Nome { get; set; }
+        public DateTime DataNascimento { get; set; }
+        public SegmentoViewModel Segmento { get; set; }
+        public string FotoPerfil { get; set; }
+        public string Email { get; set; }
+        public ICollection<ResponsavelViewModel> Responsaveis { get; set; }
     }
 }

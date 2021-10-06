@@ -27,12 +27,13 @@ namespace SisEscola.Cadastro.Infra.Data.Repository
 
         public async Task<IEnumerable<Aluno>> ObterAlunos()
         {
-            return await _sisEscolaDbContext.Alunos.AsNoTracking().ToListAsync();
+            return await _sisEscolaDbContext.Alunos.Include(e => e.Responsaveis).AsNoTracking().ToListAsync();
         }
 
         public async Task<IEnumerable<Aluno>> ObterAlunosComFiltro(string tipoFiltro, string consulta)
         {
-            return await _sisEscolaDbContext.Alunos.Where(e => e.GetType().GetProperty(tipoFiltro).GetValue(tipoFiltro).ToString() == consulta).ToListAsync(); ;
+            //return await _sisEscolaDbContext.Alunos.Where(e => e.GetType().GetProperty(tipoFiltro).GetValue(tipoFiltro).ToString().Contains(consulta)).Include(e => e.Responsaveis).ToListAsync(); ;
+            return await _sisEscolaDbContext.Alunos.Where(e => e.GetType().GetProperty(tipoFiltro).GetValue(e, null).Equals(consulta)).ToListAsync();
         }
 
         public async Task<IEnumerable<Responsavel>> ObterResponsaveis()
