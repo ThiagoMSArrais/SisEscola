@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SisEscola.Cadastro.Domain",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SisEscola.Core", "src\SisEscola.Core\SisEscola.Core.csproj", "{79E4F5B6-C9C3-4C4D-A4BE-74F81E6371EB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SisEscola.Cadastro.Infra.Data", "src\SisEscola.Cadastro.Infra.Data\SisEscola.Cadastro.Infra.Data.csproj", "{41174E70-A62E-4CEC-93C3-C975D2AC1075}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{79E4F5B6-C9C3-4C4D-A4BE-74F81E6371EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79E4F5B6-C9C3-4C4D-A4BE-74F81E6371EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79E4F5B6-C9C3-4C4D-A4BE-74F81E6371EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41174E70-A62E-4CEC-93C3-C975D2AC1075}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41174E70-A62E-4CEC-93C3-C975D2AC1075}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41174E70-A62E-4CEC-93C3-C975D2AC1075}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41174E70-A62E-4CEC-93C3-C975D2AC1075}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

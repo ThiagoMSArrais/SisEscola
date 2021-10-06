@@ -65,7 +65,7 @@ namespace SisEscola.Cadastro.Domain.Models
         {
             When(e => e.Segmento == Segmento.ENSINOFUNDAMENTAL, () =>
             {
-                RuleFor(e => e.Email).NotEmpty().WithMessage("Informe um e-mail do aluno.");
+                RuleFor(e => e.Email).EmailAddress().WithMessage("Informe um e-mail do aluno.");
             });
                 
         }
